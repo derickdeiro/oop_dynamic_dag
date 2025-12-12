@@ -98,16 +98,16 @@ class PipelineConstructor:
             return extract.extract_data(exec_date=logical_date)
 
         @task(task_id='Transform_Data')
-        def task_transform(logical_date):
+        def task_transform(data, logical_date):
             """Task to perform data transformation."""
             transform = transform_class()
-            return transform.transform_data(exec_date=logical_date)
+            return transform.transform_data(data=data, exec_date=logical_date)
 
         @task(task_id='Load_Data')
-        def task_insert_data_into_database():
+        def task_insert_data_into_database(data, logical_date):
             """Task to perform data loading into the database."""
             load = load_class()
-            return load.load_data()
+            return load.load_data(data=data, exec_date=logical_date)
 
     # ---------------------------------------------------------------------------
         # Declare dependencies

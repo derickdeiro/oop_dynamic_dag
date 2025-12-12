@@ -4,10 +4,11 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from projects.core.elt_core import ExtractData
+from pendulum import DateTime
 
 
 class ExtractDataSource3(ExtractData):
-    def extract(self):
+    def extract(self, exec_date: DateTime):
         # Implement the extraction logic for source 3
         print("Extracting data from source 3")
         # Example: return data as a list of dictionaries

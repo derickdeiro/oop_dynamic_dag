@@ -4,9 +4,11 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from projects.core.elt_core import TransformData
+from pendulum import DateTime
+from typing import Any
 
 class TransformDataSource3(TransformData):
-    def transform(self, data):
+    def transform(self, data: Any, exec_date: DateTime):
         # Implement the transformation logic for source 3
         print("Transforming data from source 3")
         # Example: convert all values to uppercase
