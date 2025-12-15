@@ -8,9 +8,9 @@ from pendulum import DateTime
 from typing import Any
 
 class TransformDataSource2(TransformData):
-    def transform(self, data: Any, exec_date: DateTime):
-        # Implement the transformation logic for source 2
+    def transform_data(self, data: Any, exec_date: DateTime):
+       
         print("Transforming data from source 2")
-        # Example: convert all values to uppercase
+       
         transformed_data = [{"id": item["id"], "value": item["value"].upper()} for item in data]
         return transformed_data

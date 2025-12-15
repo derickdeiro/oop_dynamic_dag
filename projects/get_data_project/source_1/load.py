@@ -8,8 +8,8 @@ from typing import Any
 from pendulum import DateTime
 
 class LoadDataSource1(LoadData):
-    def load(self, data: Any, exec_date: DateTime):
-        # Implement the loading logic for source 1
+    def load_data(self, data: Any, exec_date: DateTime):
+        
         print("Loading data from source 1")
         for item in data:
             print(f"Loaded item: {item}")

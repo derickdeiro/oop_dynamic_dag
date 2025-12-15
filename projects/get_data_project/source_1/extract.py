@@ -7,9 +7,9 @@ from projects.core.elt_core import ExtractData
 from pendulum import DateTime
 
 class ExtractDataSource1(ExtractData):
-    def extract(self, exec_date: DateTime):
-        # Implement the extraction logic for source 1
+    def extract_data(self, exec_date: DateTime):
+       
         print("Extracting data from source 1")
-        # Example: return data as a list of dictionaries
+       
         data = [{"id": 1, "value": "data1"}, {"id": 2, "value": "data2"}]
         return data
