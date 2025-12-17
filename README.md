@@ -1,5 +1,3 @@
-# oop_dynamic_dag
-Repository demonstrating dynamic DAGs using OOP
 # OOP Dynamic DAG (Airflow + Astro)
 
 This repository contains an Airflow project structured to generate dynamic DAGs using an object‑oriented approach. It is designed to run locally using the Astronomer CLI (Astro), simplifying the Airflow developer workflow on Linux.
